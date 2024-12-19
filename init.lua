@@ -1,6 +1,6 @@
 local lazy_path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
--- clone latest stable realease of lazy if not found in path
+
 if not (vim.uv or vim.loop).fs_stat(lazy_path) then
   vim.fn.system({
     "git",
@@ -14,7 +14,6 @@ end
 
 vim.opt.rtp:prepend(lazy_path)
 
--- lazy configuration
 local opts = {
   change_detection = {
     notify = false

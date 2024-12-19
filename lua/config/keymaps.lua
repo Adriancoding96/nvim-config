@@ -28,5 +28,3 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Focus on top window" })
 -- split window keys
 vim.keymap.set("n", "<leader>wv", ":vsplit<cr>", { desc = "Window Split Vertical" })
 vim.keymap.set("n", "<leader>wh", ":split<cr>", { desc = "Window Split Horizontal" })
-
-
