@@ -9,7 +9,9 @@ return {
             sources = {
                 null_ls.builtins.formatting.stylua,
                 require("none-ls.diagnostics.eslint_d"),
-                null_ls.builtins.formatting.prettier
+                null_ls.builtins.formatting.prettier.with({
+                    extra_args = { "--tab-width", "4" }
+                })
             }
         })
         vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, { desc = "Code Format" })
